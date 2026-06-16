@@ -1,0 +1,344 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --primary-color: rgb(233, 201, 132);
+    --red: rgb(195, 14, 14);
+    --gap: 3rem;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: "Montserrat", sans-serif;
+}
+
+h1{
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+h2{
+    font-size: 4rem;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    line-height: 0.9;
+    background-color: var(--primary-color);
+}
+
+h3{
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    line-height: 1;
+
+}
+
+h4{
+    font-size: 4.5rem;
+}
+
+h5{
+    font-size: 4rem;
+}
+
+h6{
+    font-size: 3.5rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Pagina Inicial */
+.karate{
+    text-align: center;
+    margin: 21.5vw 25%;
+     max-width: 100vh;
+     max-height: 100vh;
+     background-color:  rgb(221, 181, 96);
+     text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+.karate h1{
+    font-size: 80px;
+    color: var(--red);
+    font-family: 'Arial', sans-serif;
+}
+.karate a{
+    text-decoration: none;
+    color: var(--red);
+}
+
+.efeito{
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid black;
+  animation: typewriter 5s steps(25) infinite alternate, blink2 0.8s infinite;
+}
+
+@keyframes typewriter {
+  from { width: 0;}
+  to  { width: 1280px; }
+}
+
+@keyframes blink2 {
+  50% { border-color: transparent; }
+}
+
+/* Configurações Gerais */
+body{
+    background-color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: grid;
+    grid-template-rows:auto auto 1fr auto;
+    min-height: 100vh;
+}
+
+header{
+    background-color: var(--primary-color);
+    padding: 4.5vh;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    font-size: 3.5vh;
+    text-align: center;
+}
+
+header a{
+    text-decoration: none;
+    color: var(--red);
+}
+
+nav{
+    background-color: rgb(179, 152, 95);
+    padding: 10px;
+    min-height: 2vh;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    gap: 2vh;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-right: 15%;
+    text-shadow: 1px 1px 2px black; 
+    color: var(--red);
+    font-size: 2.3vh;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: rgb(242, 194, 3);
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover{
+    color: var(--red);
+}
+
+.section-title{
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--red);
+    margin-bottom: -1px;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    padding: 5vh;
+}
+
+/*Cards Iniciais*/
+.blue-box{
+    background-color: var(--primary-color  );
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 22px 2px rgba(0, 0, 0, 0.77);
+    max-width: 150vh;
+    width: 100%;
+}
+
+.cards{
+    display:  grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+.cards a{
+    text-decoration: none;
+    color:  var(--red);
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.opcoes{
+    display: flex;
+    flex-direction: column;
+    background-color:  var(--primary-color);
+    color:  var(--red);
+    padding: 13vh;
+    border-radius: 10px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.opcoes:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+}
+
+.opcoes img{
+    margin-top: 10px;
+    height: 90%;
+}
+.icones{
+    text-align: center;
+    background-color: rgba(80, 78, 82, 0.116);
+    height: 22vh;
+    width: 100%;
+    border-radius: 5px;
+}
+
+
+/* Filmes */
+.main-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--primary-color);
+}
+
+
+.white-box{
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 22px 2px rgba(0, 0, 0, 0.833);
+    max-width: 1280px;
+    width: 100%;
+}
+
+.intems{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    position: relative;
+    gap: var(--gap);
+}
+
+.filme-text-content, .filme-img{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin-left: 30%;
+    margin-right: 15%;
+    color: var(--red);
+}
+.filme-text-content h3{
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+}
+.filme-text-content p{
+    font-size: 1.5rem;
+}
+
+.filme-img{
+    max-width: 100%;
+    height: auto;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 680px){
+    .intems{
+        display: block;
+    }
+    .item{
+        margin-bottom: 20px;
+    }
+    main{
+        height: auto;
+    }
+}
+
+footer{
+    padding: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: 3px;
+    background-color: rgb(179, 152, 95);
+    color:  var(--red);
+}
+
+/*Contato*/
+.contato-icon{
+    /* background-color: rgba(80, 78, 82, 0.116); */
+    display: inline-block; 
+    position: relative; 
+    cursor: pointer;
+    height: 22vh;
+    width: 100%;
+    border-radius: 5px;
+    perspective: 800px;
+}
+
+
+
+
+.contatos{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    background-color:  var(--primary-color);
+    color:  var(--red);
+    padding: 4vh;
+    border-radius: 10px;
+    position: relative;
+    text-transform: uppercase;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    font-size: 30px;
+}
+.contatos:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+}
+
+.contatos img{
+    margin-top: 10px;
+    height: 90%;
+}
+
+.frente,
+.verso {
+width: 200px; 
+height: 80px; 
+position: absolute; 
+top: 0; 
+left: 0; 
+backface-visibility: hidden; 
+transition: transform 0.7s ease; 
+margin-bottom: 0;
+}
+.frente {
+transform: rotateY(0deg);
+}
+.verso {
+transform: rotateY(180deg);
+}
+.contato-icon:hover .frente {
+transform: rotateY(-180deg);
+}
+.contato-icon:hover .verso {
+transform: rotateY(0deg);
+}
+
+/*Roda o pé*/
+footer p{
+    text-align: left;
+    font-size: 1.5rem;
+    margin-left: 17%;
+    margin-top: 1vh;
+}
+footer .image-ucb{
+    text-align: right;
+    margin-right: 17%;
+    margin-top: -40px;
+}
